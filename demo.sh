@@ -1,21 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 
 # Makes programs, downloads sample data, trains a GloVe model, and then evaluates it.
 # One optional argument can specify the language used for eval script: matlab, octave or [default] python
 
 make
-if [ ! -e text8 ]; then
-  if hash wget 2>/dev/null; then
-    wget http://mattmahoney.net/dc/text8.zip
-  else
-    curl -O http://mattmahoney.net/dc/text8.zip
-  fi
-  unzip text8.zip
-  rm text8.zip
-fi
 
-CORPUS=text8
+CORPUS=ciphertext.txt
 VOCAB_FILE=vocab.txt
 COOCCURRENCE_FILE=cooccurrence.bin
 COOCCURRENCE_SHUF_FILE=cooccurrence.shuf.bin
@@ -23,10 +14,10 @@ BUILDDIR=build
 SAVE_FILE=vectors
 VERBOSE=2
 MEMORY=4.0
-VOCAB_MIN_COUNT=5
-VECTOR_SIZE=50
-MAX_ITER=15
-WINDOW_SIZE=15
+VOCAB_MIN_COUNT=1
+VECTOR_SIZE=30
+MAX_ITER=50
+WINDOW_SIZE=4
 BINARY=2
 NUM_THREADS=8
 X_MAX=10
