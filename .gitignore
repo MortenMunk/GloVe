@@ -47,3 +47,5 @@ build/*
 /vocab.txt
 
 /.direnv
+key.json
+ciphertext.txt
