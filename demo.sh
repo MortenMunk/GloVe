@@ -6,7 +6,7 @@ set -e
 
 make
 
-CORPUS=ciphertext.txt
+CORPUS=combined.txt
 VOCAB_FILE=vocab.txt
 COOCCURRENCE_FILE=cooccurrence.bin
 COOCCURRENCE_SHUF_FILE=cooccurrence.shuf.bin
@@ -16,7 +16,7 @@ VERBOSE=2
 MEMORY=4.0
 VOCAB_MIN_COUNT=1
 VECTOR_SIZE=20
-MAX_ITER=100
+MAX_ITER=150
 WINDOW_SIZE=2
 BINARY=2
 NUM_THREADS=8

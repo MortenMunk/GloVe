@@ -48,4 +48,6 @@ build/*
 
 /.direnv
 key.json
-ciphertext.txt
+*.txt
+*.png
+
